@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
+
+/* .brand
+{
+    font-family: 'Fugaz One';
+}
+.heart
+{
+    transform: rotate(0.5turn);
+    vertical-align: middle;
+    font-size: 30px;
+    margin-top: -10px;
+    color: #FF4848;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.home
+{
+    padding-top: 5% !important;
+    padding-bottom: 5% !important;
+} */
+#title, .title
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 6rem;
+}
+.title2
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+}
+.title3
+{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+}
+.uniques
+{
+    border-bottom: 10px solid #FF4848;
+    border-radius: 5px;
+}
+.squad-section-1, .squad-section-2
+{
+    height: 100%;
+}
+.squad-iphone-mockup-1
+{
+    height: 570px;
+}
+.squad-yellow
+{
+    background-color: #FEE357;
+}
+.slider-container
+{
+    background-color: rgb(20, 20, 20);
+}
+ 
+.form-modal
+{
+    background-color: black;
+}
+.paypal-btn-container
+{
+    background-color: black;
+}
+.squad-modal .modal-content
+{
+    width: 85%;
+    margin: auto;
+}
+.img-card
+{
+    opacity: 0.5;
+}
+.img-name
+{
+    top: 200px;
+    left: 20px;
+    font-size: 1.6rem !important;
+}
+.img-price
+{
+    border: solid 1px #FF4848;
+    border-radius: 5px;
+}
+.squad-section-1
+{
+    height: 100%;
+}
+@media screen and (max-width: 700px)
+{
+    .swiper-slide
+    {
+        width: 90% !important;
+    }
+    #title, .title
+    {
+        font-size: 3rem;
+    }
+    .title2
+    {
+        font-size: 2rem;
+    }
+    .squad-section-1
+    {
+        height: 80%;
+    }
+} 

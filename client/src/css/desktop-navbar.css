@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fugaz+One&display=swap');
+
+.brand
+{
+    font-family: 'Fugaz One';
+}
+.desktop-navbar
+{
+    z-index: 1;
+}
+.heart
+{
+    transform: rotate(0.5turn);
+    vertical-align: middle;
+    font-size: 28px;
+    margin-top: -8px;
+    margin-left: 2px;
+    margin-right: 2px;
+}

@@ -1,0 +1,19 @@
+.card-img
+{
+    object-fit: cover;
+    height: 100%;
+    opacity: 0.6;
+}
+.card-price
+{
+    border: solid 1px #FF4848;
+    border-radius: 5px;
+}
+.squad_finger
+{
+    position: absolute;
+    height: 5.5rem;
+    transform: rotate(0.1turn);
+    right: 0;
+    bottom: -40px;
+}
