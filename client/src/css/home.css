@@ -56,7 +56,6 @@
 {
     background-color: rgb(20, 20, 20);
 }
- 
 .form-modal
 {
     background-color: black;
@@ -111,9 +110,15 @@
     {
         height: auto;
     }
+    .slider-container
+    {
+        margin-top: 15% !important;
+        margin-bottom: 15% !important;
+    }
     .squad-iphone-mockup-1
     {
         margin-top: 15% !important;
         margin-bottom: 15% !important;
     }
+    
 } 
