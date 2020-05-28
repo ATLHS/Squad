@@ -83,7 +83,7 @@ const Home = () => {
                     <Button as="a" href="#section1" className="bg-dark-gray text-white" type="button" size="lg">Commencez maintenant</Button>
                 </Col>
                 <Col xs={12} md={6} className="h-100 d-flex justify-content-center align-items-center squad-section-2 bg-primary pt-md-4">
-                    <Image className="squad-iphone-mockup-1 animated slow swing delay-1s mb-4 mt-4 m-md-0" src={squad_iphone_mockup_1} alt="squad-iphone-mockup-1"/>
+                    <Image className="squad-iphone-mockup-1 animated slow swing delay-1s mt-5" src={squad_iphone_mockup_1} alt="squad-iphone-mockup-1"/>
                 </Col>
                 <Col xs={12} md={6} className="h-100 d-flex justify-content-center align-items-center squad-section-3 bg-white">
                     <SquadCardExemple />
