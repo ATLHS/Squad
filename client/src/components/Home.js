@@ -78,14 +78,14 @@ const Home = () => {
         <>
             <SquadModal className="squad-modal" handleClose={handleClose} show={show} isBooking={isBooking.isBooking} payer={isBooking.payer} mentor={mentor} onSuccess={onSuccess} />
             <Row as="section" className="h-100 m-0 flex-wrap">
-                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center flex-column squad-section-1 squad-background-color pt-4">
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center flex-column squad-section-1 squad-background-color mt-md-4">
                     <h2 id="title" className="text-dark text-center w-100 mb-5">Des lives de <br/> <span className="inline-block w-auto text-white">{events[i]}</span><br /> avec vos proches</h2>
                     <Button as="a" href="#section1" className="bg-dark-gray text-white" type="button" size="lg">Commencez maintenant</Button>
                 </Col>
-                <Col xs={12} md={6} className="h-100 d-flex justify-content-center align-items-center squad-section-2 bg-primary">
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center squad-section-2 bg-primary mt-md-4">
                     <Image className="squad-iphone-mockup-1 animated slow swing delay-1s" src={squad_iphone_mockup_1} alt="squad-iphone-mockup-1"/>
                 </Col>
-                <Col xs={12} md={6} className="h-100 d-flex justify-content-center align-items-center squad-section-3 bg-white">
+                <Col xs={12} md={6} className="d-flex justify-content-center align-items-center squad-section-3 bg-white">
                     <SquadCardExemple />
                 </Col>
                 <Col xs={12} md={6} className="h-100 d-flex justify-content-center align-items-center squad-section-4 flex-column squad-yellow">

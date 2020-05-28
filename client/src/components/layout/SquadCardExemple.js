@@ -11,7 +11,7 @@ import "../../css/squad-live.css"
 const SquadCardExemple = () => {
     return (
         <>
-            <Card className="mb-4 mt-4 m-md-0" style={{ width: '18rem', height: "30rem", backgroundColor: "black" }}>
+            <Card className="m-md-0 squad-card-example" style={{ width: '18rem', height: "30rem", backgroundColor: "black" }}>
                 <Card.Img className="card-img" variant="top" src={squad_live1} />
                 <Card.Title className="text-white p-2 position-absolute lead" style={{top: "0", right: "0"}}>Disponible <i className="fas fa-circle text-success"></i></Card.Title>
                 <Card.Body className="position-absolute" style={{ bottom: "3%", width: "100%"}}>
