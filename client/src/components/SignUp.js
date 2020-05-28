@@ -34,7 +34,7 @@ const SignUp = () => {
                 <Col md={3} className="m-auto">
                     <Form className="shadow p-3 mb-5 bg-white rounded" onSubmit={handleSubmit(handleSingUp)} >
                         <h2 className="mb-3">Inscription</h2>
-                        <h3 className="mb-4 lead title3">Animez des lives et partager votre passion tout en étant rémunéré.</h3>
+                        <h3 className="mb-4 lead title3">Animez des lives et partagez votre passion tout en étant rémunéré.</h3>
                         <Form.Group controlId="email"> 
                             <Form.Label className="text-dark">Email</Form.Label>
                             <Form.Control name="email" type="text" ref={register({ required: true })} />

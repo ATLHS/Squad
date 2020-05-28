@@ -6,7 +6,7 @@ import "../../css/squad-card.css"
 const SquadCard = props => {
     return (
         <>
-        <Card className="swiper-slide m-3">
+        <Card className="swiper-slide mb-4 mt-4 m-md-3">
             <Card.Img className="card-img" variant="top" src={props.img} />
             <Card.Title className="text-white p-2 position-absolute lead" style={{top: "0", right: "0"}}>{props.statut} <i className="fas fa-circle text-success"></i></Card.Title>
             <Card.Body className="position-absolute" style={{ bottom: "3%", width: "100%"}}>
