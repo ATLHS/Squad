@@ -13,7 +13,7 @@ const DesktopNavbar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
                         <Link className="text-white mr-5 lead text-decoration-none" to="/signup">Animer un live</Link>
-                        <Link className="text-white mr-5 lead text-decoration-none" to="/contact">Contact</Link>
+                        <a className="text-white mr-5 lead text-decoration-none" href="mailto:contact@squadapp.fr">Contact</a>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

@@ -40,9 +40,13 @@
     border-bottom: 10px solid #FF4848;
     border-radius: 5px;
 }
-.squad-section-1, .squad-section-2, .squad-section-3, .squad-section-5
+.squad-section-1, .squad-section-2, .squad-section-3
 {
     height: 100%;
+}
+.squad-section-5
+{
+    height: 90%;
 }
 .squad-iphone-mockup-1
 {
@@ -84,10 +88,6 @@
     border: solid 1px #FF4848;
     border-radius: 5px;
 }
-.squad-section-1
-{
-    height: 100%;
-}
 @media screen and (max-width: 700px)
 {
     .swiper-slide
@@ -115,6 +115,5 @@
     {
         margin-top: 15% !important;
         margin-bottom: 15% !important;
-    }
-    
+    }  
 } 
