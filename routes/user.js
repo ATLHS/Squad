@@ -108,7 +108,7 @@ router.post("/signup", (req, res) => {
             }));
 
             // Send email to user   
-            transporter.sendMail({
+            transporter.sendMail({ 
                 from: '"Squad" <contact@squadapp.fr>',
                 to: email,
                 subject: "Squad, Inscription confirmée",
