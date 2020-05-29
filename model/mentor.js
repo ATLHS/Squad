@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 const Schema = mongoose.Schema;
 
 const mentorSchema = new Schema({
@@ -23,4 +23,4 @@ const mentorSchema = new Schema({
 // }
 const Mentor = mongoose.model('Mentor', mentorSchema);
 
-module.exports = Mentor;
+module.exports = Mentor; 

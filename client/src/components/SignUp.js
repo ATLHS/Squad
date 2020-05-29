@@ -9,20 +9,23 @@ import Alert from 'react-bootstrap/Alert';
 
 const SignUp = () => {
     const [registerStatus, setRegisterStatus] = useState({success: "", message: ""});
-    const { register, errors, handleSubmit } = useForm();
+    const { register, errors, handleSubmit, reset } = useForm();
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const handleSingUp = data => {
+    const handleSingUp = (data, e) => {
         fetch("/user/signup", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(res => setRegisterStatus({success: res.success, message: res.message}))
+        .then(res => {
+            setRegisterStatus({success: res.success, message: res.message});
+            e.target.reset();
+        })
         .catch(err => console.log(err))
         handleShow();
     }
