@@ -40,7 +40,7 @@
     border-bottom: 10px solid #FF4848;
     border-radius: 5px;
 }
-.squad-section-1, .squad-section-2, .squad-section-3
+.squad-section-1, .squad-section-2, .squad-section-3, .squad-section-5
 {
     height: 100%;
 }
@@ -110,11 +110,7 @@
     {
         height: auto;
     }
-    .slider-container
-    {
-        padding-top: 15% !important;
-        padding-bottom: 15% !important;
-    }
+    
     .squad-iphone-mockup-1
     {
         margin-top: 15% !important;
