@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Mentor = require("../model/Mentor")
 const nodemailer = require("nodemailer");
 const hbs = require('nodemailer-handlebars');
 const path = require("path");
@@ -62,8 +63,19 @@ router.post("/live_booking", (req, res) => {
 })
 
 router.post("/signup", (req, res) => {
-    console.log(req.body)
-    res.json(true)
+    const {name, firstname, email, tel} = req.body;
+    Mentor.findOne({email}, (err, user) => {
+        if (err) {return res.json({ success: false, message: 'Désolé. Un problème est survenu. Veuillez réessayer plus tard.'})} 
+        if (user) {return res.json({ success: false, message: 'Un compte existe déjà pour cette adresse email.'})}
+
+        // Save the new user    
+        const newMentor = new Mentor({name, firstname, email, tel});
+        newMentor.save((err, user) => {
+            if (err) return console.error(err);
+            if (err) {return res.json({ success: false, message: 'Désolé. Un problème est survenu. Veuillez réessayer plus tard.'})} 
+            if (user) {return res.json({ success: true, message: `Merci pour votre inscription ${name}, une personne de la Squad team vous contactera d\'ici peux. kiss !`})}
+        })
+    })
 })
 
 module.exports = router;

@@ -8,7 +8,7 @@ import Modal from 'react-bootstrap/Modal';
 import Alert from 'react-bootstrap/Alert';
 
 const SignUp = () => {
-    const [isRegister, setIsRegister] = useState();
+    const [registerStatus, setRegisterStatus] = useState({success: "", message: ""});
     const { register, errors, handleSubmit } = useForm();
     const [show, setShow] = useState(false);
 
@@ -22,28 +22,40 @@ const SignUp = () => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(res => setIsRegister(res), handleShow())
+        .then(res => setRegisterStatus({success: res.success, message: res.message}))
         .catch(err => console.log(err))
+        handleShow();
     }
+    console.log(registerStatus)
     return (
         <>
             <Modal show={show} onHide={handleClose} centered>
-                <Alert className="m-0 text-center" variant={!isRegister ? "danger" : "success"}>{!isRegister ? "Il semble que vous possédez déjà un compte. \n Veuillez vous connecter." : "Un mail de confirmation vous a été envoyé"}.</Alert>
+                <Alert className="m-0 text-center" variant={!registerStatus.success ? "danger" : "success"}>{registerStatus.message}</Alert>
             </Modal>
             <Row className="h-100 m-0 bg-light">
-                <Col md={3} className="m-auto">
-                    <Form className="shadow p-3 mb-5 bg-white rounded" onSubmit={handleSubmit(handleSingUp)} >
+                <Col md={3} className="m-auto pt-5">
+                    <Form className="shadow mt-5 p-3 mb-5 bg-white rounded" onSubmit={handleSubmit(handleSingUp)} >
                         <h2 className="mb-3">Inscription</h2>
                         <h3 className="mb-4 lead title3">Animez des lives et partagez votre passion tout en étant rémunéré.</h3>
-                        <Form.Group controlId="email"> 
+                        <Form.Group className="mb-0" controlId="name"> 
+                            <Form.Label className="text-dark">Nom</Form.Label>
+                            <Form.Control name="name" type="text" ref={register({ required: true })} />
+                            <Form.Text className="text-danger">{errors.name && "Nom obligatoire."}</Form.Text>
+                        </Form.Group>
+                        <Form.Group className="mb-0" controlId="firstname"> 
+                            <Form.Label className="text-dark">Prénom</Form.Label>
+                            <Form.Control name="firstname" type="text" ref={register({ required: true })} />
+                            <Form.Text className="text-danger">{errors.firstname && "Prénom obligatoire."}</Form.Text>
+                        </Form.Group>
+                        <Form.Group className="mb-0" controlId="email"> 
                             <Form.Label className="text-dark">Email</Form.Label>
                             <Form.Control name="email" type="text" ref={register({ required: true })} />
                             <Form.Text className="text-danger">{errors.email && "Email obligatoire."}</Form.Text>
                         </Form.Group>
-                        <Form.Group controlId="password">
-                            <Form.Label className="text-dark">Password</Form.Label>
-                            <Form.Control name="password" type="password" ref={register({ required: true })} />
-                            <Form.Text className="text-danger">{errors.email && "Mot de passe obligatoire."}</Form.Text>
+                        <Form.Group controlId="tel">
+                            <Form.Label className="text-dark">Tél</Form.Label>
+                            <Form.Control name="tel" type="text" ref={register({ required: true })} />
+                            <Form.Text className="text-danger">{errors.tel && "Téléphone obligatoire."}</Form.Text>
                         </Form.Group>
                         <Button className="btn-squad-color" type="submit" block>Inscription</Button>
                     </Form> 
