@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Mentor = require("./Mentor");
+const Mentor = require("../models/Mentor");
 const nodemailer = require("nodemailer");
 const hbs = require('nodemailer-handlebars');
 const path = require("path");
