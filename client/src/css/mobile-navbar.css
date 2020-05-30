@@ -10,11 +10,14 @@
 {
     font-size: 1.5rem !important;
 }
-.burger
+@media screen and (max-width: 700px)
 {
-    font-size: 10px !important;
-}
-.navbar-brand .navbar-brand
-{
-    font-size: 1.7rem;
+    .burger
+    {
+        font-size: 10px !important;
+    }
+    .navbar-brand .navbar-brand
+    {
+        font-size: 1.7rem !important;
+    }
 }
