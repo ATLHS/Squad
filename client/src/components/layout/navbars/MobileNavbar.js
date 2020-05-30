@@ -17,11 +17,10 @@ const MobileNavbar = () => {
 
     return (
         <>
-            <Navbar className={`${isOpen ? "h-100 bg-dark" : "squad-background-color"} mobile-navbar position-absolute w-100 d-flex flex-column align-items-start`} expand="lg">
+            <Navbar className={`${isOpen ? "h-100 slider-container" : "squad-background-color"} mobile-navbar position-absolute w-100 d-flex flex-column align-items-start`} expand="lg">
                <Row className="w-100 d-flex justify-content-between align-items-center ml-auto mr-auto">
                     <Navbar.Brand><Link className="text-decoration-none" to="/" onClick={() => setIsOpen(false)}><h2 className={!isOpen ? "text-white w-100 brand mb-0" : "text-white w-100 brand mb-0"}>SQU<i className={!isOpen ? "fas fa-heart text-dark heart" : "fas fa-heart squad-color heart"}></i>D</h2></Link></Navbar.Brand>
                     <Burger className="text-white" onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}/>
-                    {/* <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => {setIsOpen(!isOpen); test();}} /> */}
                </Row>
                {isOpen && 
                <Nav className="mb-auto mt-auto mr-auto ml-auto d-flex justify-content-center">
