@@ -16,13 +16,10 @@ const SquadCardExemple = () => {
                 <Card.Title className="text-white p-2 position-absolute lead" style={{top: "0", right: "0"}}>Disponible <i className="fas fa-circle text-success"></i></Card.Title>
                 <Card.Body className="position-absolute" style={{ bottom: "3%", width: "100%"}}>
                     <div className="d-flex justify-content-between">
-                        <Card.Title className="text-white pt-1 pb-1">Card Title</Card.Title>
-                        <Card.Title className="text-white card-price pt-1 pb-1 pl-2 pr-2">Card Title</Card.Title>     
+                        <Card.Title className="text-white pt-1 pb-1">Manon</Card.Title>
+                        <Card.Title className="text-white card-price pt-1 pb-1 pl-2 pr-2">60 €/h</Card.Title>     
                     </div>
-                    <Card.Text className="text-white text-truncate">
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
+                    <Card.Text className="text-white text-truncate">Enseignante de Yoga et de Pilates, je vous propose vos séances en Visio</Card.Text>
                     <Button className="btn-squad-color" block>Participez au live</Button>
                     <Image className="squad_finger" src={squad_finger} alt="squad_finger" />
                 </Card.Body>
