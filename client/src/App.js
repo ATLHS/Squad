@@ -19,9 +19,6 @@ const App = () => {
               <Route path="/signup">
                 <SignUp />
               </Route>
-              {/* <Route path="/contact">
-                <Contact />
-              </Route> */}
             </Switch>
         </Container>
     </Router>

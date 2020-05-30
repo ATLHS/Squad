@@ -1,0 +1,8 @@
+.mobile-navbar
+{
+    z-index: 1;
+}
+.disable-scroll
+{
+    overflow: hidden;
+}

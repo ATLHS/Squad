@@ -93,7 +93,12 @@ const Home = () => {
                     <Button as="a" href="#section1" className="bg-dark-gray text-white" type="button" size="lg">Commencez maintenant</Button>
                 </Col>
                 <ScrollableAnchor id={"section1"}>
-                    <Col className="d-flex justify-content-center align-items-center slider-container squad-section-5 w-auto">
+                    <Col className="d-flex justify-content-center align-items-center slider-container squad-section-5 w-auto flex-column">
+                        <Row className="w-100">
+                            <Col md={12}>
+                                <h2 className="squad-color text-left title2 m-0">Lives à venir</h2>
+                            </Col>
+                        </Row>
                         <Swiper {...params}>
                             {live_tutors.map((tutor) => <SquadCard key={tutor.id} title={tutor.title} bio={tutor.bio} price={tutor.price} statut={tutor.statut} img={tutor.img} onClick={() => getSquadLive(tutor)} />)}
                         </Swiper>
