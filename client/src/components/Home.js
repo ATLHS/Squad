@@ -94,9 +94,9 @@ const Home = () => {
                 </Col>
                 <ScrollableAnchor id={"section1"}>
                     <Col className="d-flex justify-content-center align-items-center slider-container squad-section-5 w-auto flex-column">
-                        <Row className="w-100">
+                        <Row className="w-100 mt-5">
                             <Col md={12}>
-                                <h2 className="squad-color text-left title2 m-0">Lives à venir</h2>
+                                <h2 className="text-white text-left title2 m-0">Lives à venir</h2>
                             </Col>
                         </Row>
                         <Swiper {...params}>
