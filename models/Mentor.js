@@ -3,12 +3,14 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const mentorSchema = new Schema({
-    name: {type: String, required: true},
-    firstname: {type: String, required: true},
-    email: {type: String, required: true, unique: true},
-    tel: {type: String, required: true, unique: true},
-    signUpDate: {type: Date, default: Date.now()}
-})
+  name: { type: String, required: true },
+  firstname: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  live_name: { type: String, required: true },
+  bio: { type: String, required: true },
+  price: { type: Number, required: true },
+  signUpDate: { type: Date, default: Date.now() },
+});
 
 // mentorSchema.methods.generateHash = password => {
 //     bcrypt.hash(password, 10, (err, hash) => {
@@ -21,6 +23,6 @@ const mentorSchema = new Schema({
 //         return result;
 //     });
 // }
-const Mentor = mongoose.model('Mentor', mentorSchema);
+const Mentor = mongoose.model("Mentor", mentorSchema);
 
-module.exports = Mentor; 
+module.exports = Mentor;
