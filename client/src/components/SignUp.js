@@ -44,7 +44,7 @@ const SignUp = () => {
         </Alert>
       </Modal>
       <Row className="h-100 m-0 bg-light">
-        <Col md={3} className="m-auto pt-5">
+        <Col md={5} className="m-auto pt-5">
           <Form
             className="shadow mt-5 p-3 mb-5 bg-white rounded"
             onSubmit={handleSubmit(handleSingUp)}
@@ -128,7 +128,7 @@ const SignUp = () => {
                   ref={register({ required: true })}
                 />
                 <InputGroup.Append>
-                  <InputGroup.Text id="inpuAppend">€</InputGroup.Text>
+                  <InputGroup.Text id="inpuAppend">€/h</InputGroup.Text>
                 </InputGroup.Append>
               </InputGroup>
               <Form.Text className="text-danger">
