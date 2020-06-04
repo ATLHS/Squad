@@ -9,6 +9,7 @@ const mentorSchema = new Schema({
   live_name: { type: String, required: true },
   bio: { type: String, required: true },
   price: { type: Number, required: true },
+  imageUrl: { type: String, required: true },
   signUpDate: { type: Date, default: Date.now() },
 });
 

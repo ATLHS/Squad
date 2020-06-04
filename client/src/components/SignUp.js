@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
@@ -7,23 +7,32 @@ import { useForm } from "react-hook-form";
 import Modal from "react-bootstrap/Modal";
 import Alert from "react-bootstrap/Alert";
 import InputGroup from "react-bootstrap/InputGroup";
+import bsCustomFileInput from "bs-custom-file-input";
 
 const SignUp = () => {
   const [registerStatus, setRegisterStatus] = useState({
     success: "",
     message: "",
   });
-  const { register, errors, handleSubmit, reset } = useForm();
+
+  const { register, errors, handleSubmit, reset, setValue } = useForm();
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  useEffect(() => {
+    bsCustomFileInput.init();
+  });
+
   const handleSingUp = (data, e) => {
+    const formData = new FormData();
+    formData.append("image", data.image[0]);
+    formData.append("data", JSON.stringify(data));
+
     fetch("/user/signup", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: formData,
     })
       .then((response) => response.json())
       .then((res) => {
@@ -48,6 +57,7 @@ const SignUp = () => {
           <Form
             className="shadow mt-5 p-3 mb-5 bg-white rounded"
             onSubmit={handleSubmit(handleSingUp)}
+            encType="multipart/form-data"
           >
             <h2 className="mb-3">Inscription</h2>
             <h3 className="mb-4 lead title3">
@@ -133,6 +143,19 @@ const SignUp = () => {
               </InputGroup>
               <Form.Text className="text-danger">
                 {errors.price && "Champ obligatoire."}
+              </Form.Text>
+            </Form.Group>
+            <Form.Group controlId="image">
+              <Form.File
+                name="image"
+                id="custom-file"
+                label="Ajouter une photo"
+                data-browse="Télécharger"
+                ref={register({ required: true })}
+                custom
+              />
+              <Form.Text className="text-danger">
+                {errors.image && "Image obligatoire."}
               </Form.Text>
             </Form.Group>
             <Button className="btn-squad-color" type="submit" block>

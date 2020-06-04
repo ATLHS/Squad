@@ -3,6 +3,7 @@ const router = express.Router();
 const Mentor = require("../models/Mentor");
 const nodemailer = require("nodemailer");
 const hbs = require("nodemailer-handlebars");
+const multer = require("../middleware/multer-config");
 const path = require("path");
 
 // Route
@@ -68,9 +69,11 @@ router.post("/live_booking", (req, res) => {
   res.json({ isBooking: true, payer: { payer: name, email: email } });
 });
 
-router.post("/signup", (req, res) => {
-  const { name, firstname, email, live_name, bio, price } = req.body;
-  console.log(live_name);
+router.post("/signup", multer, (req, res) => {
+  const { name, firstname, email, live_name, bio, price } = JSON.parse(
+    req.body.data
+  );
+
   Mentor.findOne({ email }, (err, user) => {
     if (err) {
       return res.json({
@@ -85,7 +88,6 @@ router.post("/signup", (req, res) => {
         message: "Un compte existe déjà pour cette adresse email.",
       });
     }
-
     // Save the new user
     const newMentor = new Mentor({
       name,
@@ -94,6 +96,9 @@ router.post("/signup", (req, res) => {
       live_name,
       bio,
       price,
+      imageUrl: `${req.protocol}://${req.get("host")}/images/${
+        req.file.filename
+      }`,
     });
     newMentor.save((err, user) => {
       if (err) return console.error(err);
@@ -104,7 +109,6 @@ router.post("/signup", (req, res) => {
             "Désolé. Un problème est survenu. Veuillez réessayer plus tard.",
         });
       }
-
       // nodemailer configuration
       const transporter = nodemailer.createTransport({
         host: "SSL0.OVH.NET",
@@ -134,7 +138,6 @@ router.post("/signup", (req, res) => {
           extName: ".handlebars",
         })
       );
-
       // Send email to user
       transporter.sendMail({
         from: '"Squad" <contact@squadapp.fr>',
