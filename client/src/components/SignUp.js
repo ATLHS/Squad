@@ -149,7 +149,7 @@ const SignUp = () => {
               <Form.File
                 name="image"
                 id="custom-file"
-                label="Ajouter une photo"
+                label="Ajouter une photo de profil"
                 data-browse="Télécharger"
                 ref={register({ required: true })}
                 custom
