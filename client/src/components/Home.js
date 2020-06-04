@@ -125,7 +125,7 @@ const Home = () => {
     isBooking: false,
     payer: { name: "", email: "" },
   });
-  const events = ["Yoga", "Cuisine", "Méditation", "Sport"];
+  const events = ["sport", "yoga", "cuisine", "méditation", "danse"];
   const [mentors, setMentors] = useState([]);
   const [mentor, setMentor] = useState({
     name: "",
@@ -140,10 +140,11 @@ const Home = () => {
   useEffect(() => {
     const wordsAnimation = setInterval(() => {
       handleWordsAnimation();
-    }, 800);
-    fetchMentor();
+    }, 500);
+
     return () => clearInterval(wordsAnimation);
-  }, []);
+    fetchMentor();
+  });
 
   const handleWordsAnimation = () => {
     i < events.length ? setI(i++) : setI(0);
