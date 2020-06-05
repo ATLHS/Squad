@@ -1,0 +1,9 @@
+.reactAccordion {
+  margin-top: 10% !important;
+}
+.card-header {
+  background-color: transparent !important;
+}
+.reactAccordion span {
+  font-size: 1.3rem;
+}
