@@ -55,7 +55,7 @@ const HowItWork = () => {
               <Card.Body>
                 Une fois votre inscription réussie et votre profil certifié par
                 Squad, votre profil apparaîtra automatiquement sur la plateforme
-                avec le statut "disponible" auprès des utilisateurs.
+                avec le statut "disponible" auprès des utilisateurs ?
               </Card.Body>
             </Accordion.Collapse>
           </Card>
@@ -106,6 +106,27 @@ const HowItWork = () => {
                 Ou
                 <br></br>- votre compte bancaire, auquel cas vous devrez fournir
                 votre RIB.
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+          <Card>
+            <Accordion.Toggle
+              className="d-flex justify-content-between align-items-center"
+              as={Card.Header}
+              eventKey="4"
+            >
+              <span className="teal">
+                Y a t'il un pourcentage sur les transactions ?
+              </span>
+              <Button className="bg-transparent border-0">
+                <i class="fas fa-angle-down text-dark"></i>
+              </Button>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="4">
+              <Card.Body>
+                En effet, la plateforme prélève une commission de 10% sur chaque
+                transaction effectuée. <br></br> Exemple : un live de 60€{" "}
+                <br></br> 60€ - 10% = 54€ reviendra au mentor.
               </Card.Body>
             </Accordion.Collapse>
           </Card>
