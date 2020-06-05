@@ -12,7 +12,9 @@ const HowItWork = () => {
     <>
       <Row className="h-100 m-0">
         <Accordion
-          className={`${isMobile ? "w-100" : "w-50"} m-auto reactAccordion p-3`}
+          className={`${
+            isMobile ? "w-100" : "w-50"
+          } ml-auto mr-auto reactAccordion p-3`}
         >
           <Card>
             <Accordion.Toggle
