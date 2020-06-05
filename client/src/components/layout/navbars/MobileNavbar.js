@@ -59,8 +59,9 @@ const MobileNavbar = () => {
         {isOpen && (
           <Nav className="mb-auto mt-auto mr-auto ml-auto d-flex justify-content-center">
             <Link
-              className="text-white mr-5 lead text-decoration-none"
+              className="text-white text-center lead text-decoration-none navLink"
               to="/howItWork"
+              onClick={() => setIsOpen(false)}
             >
               Comment ça marche ?
             </Link>
