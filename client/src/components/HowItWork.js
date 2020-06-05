@@ -4,14 +4,16 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Accordion from "react-bootstrap/Accordion";
 import { Link } from "react-router-dom";
-import { useAccordionToggle } from "react-bootstrap/AccordionToggle";
+import { isMobile } from "react-device-detect";
 import "../css/howItWork.css";
 
 const HowItWork = () => {
   return (
     <>
       <Row className="h-100 m-0">
-        <Accordion className="w-50 m-auto reactAccordion">
+        <Accordion
+          className={`${isMobile ? "w-100" : "w-50"} m-auto reactAccordion p-3`}
+        >
           <Card>
             <Accordion.Toggle
               className="d-flex justify-content-between align-items-center"
