@@ -26,7 +26,7 @@
     "react-widgets": "^4.0.20",
     "react-widgets-moment": "^4.0.20",
     "react-widgets-moment-localizer": "^1.0.2",
-    "swiper": "^5.4.1"
+    "swiper": "^6.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
